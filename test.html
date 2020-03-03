@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style type="text/css">
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+strong, b {
+    font-weight: bold !important;
+}
+body {
+	-webkit-text-size-adjust: none;
+	font-family: Arial;
+	font-size: 16px;
+	/*background: #000;*/
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapSite{
+	width:1360px;
+}
+section.main{
+	background: url('main.jpg') no-repeat top center;
+	background-size: cover;
+	min-height:1020px;
+	position: relative;
+}
+.topMenu{
+	width:850px;
+	padding:20px 0 190px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.topMenu a{
+	display:block;
+	text-align: center;
+	text-decoration: none;
+	color:#2B2D42;
+	font-weight:bold;
+	letter-spacing: 1px;
+}
+.topMenu a.menunav{
+	width:18%;
+	font-size:13px;
+	padding-top:20px;
+}
+a.logo{
+	width:28%;
+	font-size:30px;
+	background: url('logo.png') no-repeat top center;
+	padding-top: 37px;
+}
+
+.sloganWrap{
+	display:grid;
+	place-items:flex-end;
+}
+.slogan{
+	width:380px;
+	padding:0 20px 20px;
+}
+.slogan h1{
+	font-size:50px;
+}
+.slogan h2{
+	font-size:16px;
+	padding:30px 0;
+}
+.slogan h2, .slogan h1{
+	font-weight:100;
+	text-align: right;
+}
+.slogan div{
+	text-align:right;
+}
+.slogan div a{
+	width:49px;
+	height:49px;
+	margin:0 5px;
+	display: inline-block;
+	background: url('arrow.png') no-repeat top center;
+    font-size: 0;
+    line-height: 999px;
+    overflow: hidden;
+}
+.slogan div a.arrowBottom{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+div.redBox{
+	width:370px;
+	background:#D90429;
+	font-size:16px;
+	color:#FFF;
+    padding:45px;
+	position:relative;
+	z-index:10;
+	clip-path:polygon(0 5vh, 100% 0, 100% 100%, 0 100%);
+	margin-top:-270px;
+	line-height: 1.5rem;
+}
+div.redBox h3{
+	font-size:30px;
+	line-height:2.5rem;
+	letter-spacing: 3px;
+	padding:30px 0 40px;
+}
+section.two{
+	background: url('subhead.jpg') no-repeat right 300px;
+	height: 770px;
+}
+
+section.three{
+	
+}
+section.three h4{
+	text-align:right;
+	font-size:35px;
+	font-weight:500;
+	margin-top: -2vh;
+}
+section.three .wrapThree{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top:70px;
+}
+.wrapThree div{
+	width:calc(32% - 10px);
+}
+.wrapThree div:first-child{
+  position: relative;
+  top:40%;
+  transform: translateY(40%);
+}
+.wrapThree div:first-child p{
+	display:block;
+	padding: 0 3vw;
+}
+section.four{
+	background: url('mountaintop.jpg') no-repeat top center;
+	background-size: cover;
+	min-height:520px;
+	position: relative;
+	margin-top:100px;
+}
+section.five{
+	background: #D90429;
+	padding:50px 0;
+	color:#FFF;
+	z-index:10;
+	clip-path:polygon(0 7vh, 100% 0, 100% 100%, 0 100%);
+	margin-top:-7vh;
+}
+.fiveWrap{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.fiveWrap div{
+    padding:5% 3% 0 3%;
+    width: 44%;
+	font-size:16px;
+	letter-spacing:1px;
+	position:relative;
+}
+.fiveWrap div h5{
+	font-size:30px;
+	line-height:2.5rem;
+	letter-spacing: 3px;
+	padding:0 0 40px;
+	position: absolute;
+	top:0;
+}
+.six h5{
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 80px 0;
+}
+div.sixWrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+div.sixWrap .item {
+    width: calc(32% - 20px);
+    padding: 2px;
+    margin-bottom: 20px;
+	text-align:center;
+	color:#2B2D42;
+	position:relative;
+}
+div.sixWrap .item figure{
+	width: 100%;
+    height: 239px;
+    overflow: hidden;
+	position: relative;
+}
+.item figure img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+div.sixWrap .item span{
+	display:block;
+	padding:30px 0 40px;
+	font-size:19px;
+	letter-spacing:2px;
+}
+div.sixWrap .item p{
+	position: relative;
+	display:block;
+}
+div.sixWrap .item p:before{
+	position:absolute;
+	content:'';
+	width:37px;
+	height:4px;
+	background:#EF233C;
+    left: calc(50% - 14px);
+    top:-23px;
+}
+div.btnWrap{
+	text-align: center;
+	margin:70px 0;
+}
+a.btn{
+	text-decoration: none;
+	color: #FFF;
+	padding: 27px 90px 24px 30px;
+	background: url('arrow.png') no-repeat right center #2B2D42;
+	font-size: 18px;
+	border-right: solid 20px #2B2D42;
+	letter-spacing: 2px;
+	border-radius: 3px;
+}
+section.seven{
+	background: url('contact-bgr.jpg') no-repeat left center;
+	background-size: cover;
+	min-height:593px;
+	position: relative;
+}
+.eightWrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.eightWrap div.txt, .eightWrap div.contact{
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: relative;
+}
+.eightWrap div.txt{
+	padding:5% 10% 10% 3%;
+	width:52%;
+	color:#2B2D42;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.eightWrap div.contact{
+    width:25%;
+    background: #D90429;
+    font-size: 16px;
+    color: #FFF;
+	padding:5%;
+    clip-path: polygon(0 5vh, 100% 0, 100% 100%, 0 100%);
+    margin-top:-350px;
+    line-height: 1.5rem;
+}
+h6{
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+div.contact h6{
+    text-align: center;
+    padding: 35px 0 100px;
+}
+div.txt h6{
+	font-weight:500;
+	padding-bottom:3rem;
+}
+.form-group {
+    margin-bottom:1.3rem;
+}
+.form-group input{
+	display: block;
+    width: 100%;
+    padding:0.8rem 0.75rem 0.6rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #2B2D42;
+    background: #fff;
+    border-bottom:4px solid #2B2D42;
+}
+::placeholder{
+	color: #2B2D42;
+}
+:-ms-input-placeholder {
+    color: #2B2D42;
+}
+::-ms-input-placeholder {
+    color: #2B2D42;
+}
+div.contact div.btnWrap{
+    text-align: left;
+    margin: 110px 0 0 0;
+}
+
+section.footer{
+    background: #2B2D42;
+    padding:27vh 0 17vh;
+    z-index:5;
+    clip-path: polygon(0 7vh, 100% 0, 100% 100%, 0 100%);
+    margin-top: -10vh;
+    text-align: center;
+    color: #9597A1;
+}
+section.footer a.logo{
+	color: #FFF;
+	text-decoration:none;
+	line-height: 4rem;
+}
+@media (max-width: 1360px) {
+	.wrapSite{
+		width:100%;
+	}
+	.slogan{
+		padding-right:20px;
+	}
+	section.main{
+		height: auto;
+	}
+	.fiveWrap{
+		padding-top:50px;
+	}
+	.fiveWrap div h5{
+		top:-60px;
+	}
+}
+@media (max-width: 1160px) {
+	section.three h4{
+		margin: 6vh 0 -2vh;
+		text-align: center;
+	}
+	.eightWrap div.txt{
+		width: 42%;
+	}
+	.eightWrap div.contact {
+		width: 35%;
+	}
+}
+@media (max-width: 850px) {
+	.topMenu{
+		width:100%;
+	}
+	.wrapThree div{
+		width:90%;
+		padding:2% 5% 0 5%;
+	}
+	.wrapThree div:first-child {
+		position: inherit;
+		top: auto;
+		transform: initial;
+	}
+	.wrapThree div:first-child p {
+		padding: 20px 0;
+	}
+	.fiveWrap{
+		display: flex;
+		flex-direction: column;
+		padding-top:0;
+	}
+	.fiveWrap div{
+		width:90%;
+	}
+	.fiveWrap div:nth-child(2){
+		order: 1;
+	}
+	.fiveWrap div:nth-child(1){
+		margin-top:0;
+		order: 2;
+	}
+	.fiveWrap div h5{
+		padding-top:30px;
+		position:relative;
+		top: -20px;
+	}
+	.six h5{
+		padding:50px 0 40px;
+	}
+	div.sixWrap .item{
+		width:65%;
+		margin:0 auto;
+		padding-bottom: 40px;
+	}
+	
+	.eightWrap {
+		flex-direction: column;
+	}
+	.eightWrap div.txt{
+		width:90%;
+		padding:5% 5% 15% 5%;
+		order:2;
+	}
+	.eightWrap div.contact {
+		width:90%;
+		order: 1;
+		margin-top: -10vh;
+	}
+	div.contact div.btnWrap{
+		text-align: center;
+		margin:70px 0 30px;
+	}
+	.form-group input{
+		width:95%;
+	}
+	div.contact h6{
+		padding: 35px 0 40px;
+	}
+}
+@media (max-width: 560px) {
+	.topMenu{
+		flex-direction: column;
+		padding: 20px 0 100px;
+	}
+	.topMenu a:nth-child(3){
+		order: 1;
+	}
+	.topMenu a:nth-child(1){
+		order: 2;
+		margin-top: 20px;
+	}
+	.topMenu a:nth-child(2){
+		order: 3;
+	}
+	.topMenu a:nth-child(4){
+		order: 4;
+	}
+	.topMenu a:nth-child(5){
+		order: 5;
+	}
+	.topMenu a.logo{
+		width:100%;
+		position: relative;
+		top: 12px;
+	}
+	.topMenu a.menunav {
+		width: 100%;
+		padding: 8px 0;
+	}
+	div.sixWrap .item, .form-group input{
+		width:90%;
+	}
+	.eightWrap div.txt {
+		padding-bottom:25%;
+	}
+	section.seven {
+		min-height:50vh;
+	}
+}
+@media (max-width: 460px) {
+	div.redBox{
+		width:94%;
+		padding:14% 3%;
+	}
+	.slogan{
+		width:94%;
+		padding: 0 3%;
+	}
+	section.two{
+		height:auto;
+	}
+	section.three h4{
+		margin:20px 0 -60px 0;
+	}
+	a.btn{
+		padding:27px 55px 24px 16px;
+		border-right: solid 10px #2B2D42;
+	}
+}
+@media (max-width: 320px) {
+	.slogan h1{
+		font-size:40px
+	}
+	h3, h4, h5{
+		font-size:30px !important;
+	}
+}
+</style>
+</head>
+<body>
+<section class="main container">
+	<div class="container wrapSite" >
+		<div class="topMenu container" >
+			<a href="javascript:;" class="menunav" >WORK</a>
+			<a href="javascript:;" class="menunav" >CUSTOMER</a>
+			<a href="javascript:;" class="logo" >EXPLORE</a>
+			<a href="javascript:;" class="menunav" >ABOUT</a>
+			<a href="javascript:;" class="menunav" >CONNECT</a>
+		</div>
+		<div class="sloganWrap" >
+			<div class="slogan" >
+				<h1>INTO A NEW ADVENTURE</h1>
+				<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</h2>
+				<div>
+					<a href="javascript:;" class="arrowBottom" >Arrow</a>
+					<a href="javascript:;" >Arrow</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</section>
+<section class="two container wrapSite">
+	<div class="redBox" >
+		<h3>THERE IS SO MUCH TO SEE</h3>
+		<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m inim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+<br/><br/>
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+		</p>
+	</div>
+</section>
+<section class="three container wrapSite">
+	<h4>IT TAKES COURAGE TO BE SUCCESSFUL</h4>
+	<div class="wrapThree" >
+		<div><p>
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. @loremipsum 
+			<br/><br/>
+			<img src="icon.png" alt="" /><span style="position:relative; bottom:8px;"> @incredibleinc</span>
+		</p></div>
+		<div>
+			<strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co mmodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</strong>
+			<br/><br/>
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+		</div>
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+			<br/><br/>
+			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+		</div>
+	</div>
+</section>
+<section class="four"></section>
+<section class="five">
+	<div class="fiveWrap container wrapSite">
+		<div>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+	<br/><br/>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqutip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+		</div>
+		<div>
+	<h5>ALWAYS EXPECT THE UNEXPECTED</h5>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+	<br/><br/>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+		</div>
+	</div>
+</section>
+<section class="six container wrapSite">
+	<h5>To the Edge and beyond</h5>
+	<div class="sixWrap" >
+		<div class="item" >
+			<figure>
+				<img src="img1.jpg" alt="" />
+			</figure>
+			<span>CLOSED EYES</span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+		</div>
+		<div class="item" >
+			<figure>
+				<img src="img2.jpg" alt="" />
+			</figure>
+			<span>DEEP BREATH</span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+		</div>
+		<div class="item" >
+			<figure>
+				<img src="img3.jpg" alt="" />
+			</figure>
+			<span>PRESS ON</span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+		</div>
+	</div>
+	<div class="btnWrap" >
+		<a class="btn" href="javascript:;" >SHOW MORE</a>
+	</div>
+</section>
+<section class="seven"></section>
+<section class="eight container wrapSite">
+	<div class="eightWrap" >
+		<div class="txt">
+			<h6>Hard work will be honoured</h6>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				<br/><br/>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqutip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+			</p>
+		</div>
+		<div class="contact">
+			<h6>Don’t Hesitate<br/>to contact us</h6>
+			<form >
+				<div class="form-group">
+					<input type="text" placeholder="Name" />
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Phone" />
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="eMail" />
+				</div>
+				<div class="btnWrap" >
+					<a class="btn" href="javascript:;" >OFF YOU GO</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+<section class="footer">
+	<div class="container wrapSite" >
+		<a href="javascript:;" class="logo" >EXPLORE</a>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+</section>
+</body>
+</html>
